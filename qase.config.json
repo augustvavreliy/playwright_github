@@ -1,0 +1,36 @@
+{
+	"mode": "testops", 
+	"fallback": "report",
+	"report": {
+		"driver": "local",
+		"connection": {
+			"local": {
+				"path": "./build/qase-report",
+				"format": "json" 
+			}
+		}
+	},
+	"testops": {
+		"bulk": true,
+		"api": {
+			"token": "",
+			"host": "qase.io"
+		},
+		"run": {
+			"title": "Playwright test repo",
+			"complete": true
+		},
+		"defect": true,
+		"project": "DEV",
+		"chunk": 200
+	},
+	"framework": {
+		"pytest": {
+			"capture": {
+				"logs": true,
+				"http": true
+			}
+		}
+	},
+	"environment": "local"
+}
